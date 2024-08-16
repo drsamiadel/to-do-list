@@ -32,7 +32,7 @@ Dont Forget to add linkedin Account to Scrape Profile
 ```
 - Client
 ```bash
-  NEXT_PUBLIC_API_URL=<http://localhost:3000>
+  NEXT_PUBLIC_API_URL=http://localhost:3000
   JWT_SECRET=UTNVQcLlqEY
 ```
 ## To Start the Project
