@@ -1,4 +1,3 @@
-import getServerUser from "@/lib/auth/getServerUser";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {

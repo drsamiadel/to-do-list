@@ -15,7 +15,12 @@ export class ProfileController {
 
   @Get('/linkedin')
   @UseGuards(AuthGuard())
-  async scrapeLinkedInProfile(@Req() req): Promise<any> {
+  async scrapeLinkedInProfile(@Req() req): Promise<{
+    name: string;
+    location: string;
+    url: string;
+    image: string;
+  }> {
     await this.profileService.loginToLinkedIn(
       process.env.LINKEDIN_EMAIL,
       process.env.LINKEDIN_PASSWORD,

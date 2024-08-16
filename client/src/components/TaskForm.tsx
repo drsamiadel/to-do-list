@@ -28,6 +28,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { PenBox, Plus } from 'lucide-react';
 import { RootState } from "@/lib/redux/store"; // Assuming you have a RootState type defined
+import { Task } from '../../@types/types';
 
 const schema = z.object({
     title: z.string().min(3),
@@ -40,7 +41,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const TaskForm: React.FC<{
-    task?: any;
+    task?: Task | null;
 }> = ({
     task
 }) => {
@@ -77,7 +78,7 @@ const TaskForm: React.FC<{
         ];
 
         const handleSaveButton = (data: FormData) => {
-            dispatch(editTask({ _id: task._id, ...data }));
+            { task && dispatch(editTask({ _id: task._id, ...data })); }
             handleClose();
         }
 

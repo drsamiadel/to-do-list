@@ -33,7 +33,12 @@ export class ProfileService {
     return hidePassword;
   }
 
-  async scrapeLinkedInProfile(url: string): Promise<any> {
+  async scrapeLinkedInProfile(url: string): Promise<{
+    name: string;
+    location: string;
+    url: string;
+    image: string;
+  }> {
     try {
       await this.driver.get(url);
 

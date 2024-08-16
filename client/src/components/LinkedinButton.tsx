@@ -9,11 +9,12 @@ import DialogTitle from '@mui/material/DialogTitle';
 import api from '@/lib/api';
 import { Linkedin } from 'lucide-react';
 import Image from 'next/image';
+import { LinkedIn } from '../../@types/types';
 
 
 const LinkedinButton: React.FC = () => {
     const [open, setOpen] = React.useState(false);
-    const [account, setAccount] = React.useState<any | null>(null);
+    const [account, setAccount] = React.useState<LinkedIn | null>(null);
     const [loading, setLoading] = React.useState(true);
     const [error, setError] = React.useState<any | null>(null);
 
