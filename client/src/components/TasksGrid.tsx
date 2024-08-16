@@ -7,16 +7,11 @@ import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import { CheckCircle, FilterX, Megaphone, Tag } from 'lucide-react';
-import TextField from '@mui/material/TextField';
-import Autocomplete from '@mui/material/Autocomplete';
+import { Megaphone } from 'lucide-react';
 import { useEffect } from 'react';
 import TasksGridLoading from './TasksGridLoading';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import Typography from '@mui/material/Typography';
-import ToggleButton from '@mui/material/ToggleButton';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/lib/redux/store"; // Assuming you have a RootState type defined
 import { fetchCategories, fetchTasks } from "@/lib/redux/features/tasks/tasksSlice";
